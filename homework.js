@@ -91,5 +91,5 @@ function selectionSort(nums_1) {
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
 function textList(array) {
-	return array.join(',');
+	return array.join();
 }
