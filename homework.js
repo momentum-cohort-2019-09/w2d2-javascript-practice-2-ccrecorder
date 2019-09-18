@@ -11,10 +11,26 @@ function remove(peeps_1, name) {
 	for (let i = 0; i < peeps.length; i++) {
 		if (peeps[i] === name) {
 			peeps.splice(i, 1);
+			i--;
 		}
 	}
 	return peeps;
 }
+
+function remove(array, itemToRemove) {
+	let output = [];
+	for (let member of array) {
+		if (member !== itemToRemove) {
+			output.push(member);
+		}
+	}
+	return output;
+}
+
+function remove(array, itemToRemove) {
+	return array.filter((member) => member !== itemToRemove);
+}
+
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 
@@ -44,9 +60,9 @@ function average(nums) {
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
 function minimum(nums) {
-	let min = undefined;
-	for (let num of nums) {
-		if (min === undefined || num < min) min = num;
+	let min;
+	for (let item of nums) {
+		if (min === undefined || item < min) min = item;
 	}
 	return min;
 }
