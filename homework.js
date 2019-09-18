@@ -73,9 +73,23 @@ function minimum(nums) {
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+function selectionSort(nums_1) {
+	let nums = nums_1.slice();
+	let nums_2 = [];
+	while (nums.length > 0) {
+		let min = minimum(nums);
+		let i = nums.indexOf(min);
+		nums_2.push(min);
+		nums.splice(i, 1);
+	}
+	return nums_2;
+}
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+function textList(array) {
+	return array.join(',');
+}
